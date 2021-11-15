@@ -1,0 +1,58 @@
+<%- include('templates/encabezadob')%>
+<body style="background-color: black">
+    <script type="text/javascript">
+        alert("LA MICRO.com te da la bienvenida a su página de viajes.\nDar clic en (Aceptar)");
+        </script>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <form action="/ruta/search1" method="POST" class="d-flex">
+                        <input class="form-control me-2" style="background-color: whitesmoke; text-align: center;" type="search" placeholder="Seleccionar Inicio de ruta" aria-label="search" name="search" id="search">
+                        <button class="btn btn-primary col-2" type="submit">Buscar 🔍</button>
+                      </form>
+                </div>
+                <pre>
+                </pre>
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <form action="/ruta/search2" method="POST" class="d-flex">
+                        <input class="form-control me-2" style="background-color: whitesmoke; text-align: center;" type="search" placeholder="Seleccionar Fin de ruta" aria-label="search" name="search" id="search">
+                        <button class="btn btn-primary col-2" type="submit">Buscar 🔍</button>
+                      </form>
+                </div>
+                <pre>
+                </pre>
+                <div class="card">
+                    <div class="card-header border border-dark" style="background-color: rgb(255, 166, 0);">
+                        <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: black;"><b>Historial de viajes</b></h3>
+                    </div>
+                    <div class="card-body border border-dark">
+                        <table class="table">
+                            <th class="table-dark">ID</th>
+                            <th class="table-secondary">Fecha</th>
+                            <th class="table-dark">Ruta</th>
+                            <th class="table-secondary">Inicio</th>
+                            <th class="table-dark">Fin</th>
+                            <th class="table-secondary">Hrs Inicio</th>
+                            <th class="table-dark">Hrs Fin</th>
+                            <th class="table-secondary">Eliminar ruta</th>
+
+                            <tbody>
+                                    <tr class="align-middle">
+                                    <td class="table-dark"><b></b></td>
+                                    <td class="table-secondary"><b></b></td>
+                                    <td class="table-dark"><b></b></td>
+                                    <td class="table-secondary"><b></b></td>
+                                    <td class="table-dark"><b></b></td>
+                                    <td class="table-secondary"><b></b></td>
+                                    <td class="table-dark"><b></b></td>
+                                    <td class="table-secondary"><b><a class="btn btn-primary" href="">Eliminar Registro 🔴</a> </b></td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+</body>
+<%- include('templates/fin')%>

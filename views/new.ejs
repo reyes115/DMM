@@ -1,0 +1,66 @@
+<!--ENCABEZADO-->
+<%- include('templates/encabezado')%>
+<body style="background-color: ghostwhite;">
+    <div class="grid-block">
+    <!--IMAGEN INICIO-->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-6 col-sm-12" style="text-align: center;">
+              <pre></pre>
+              <!--IMAGEN-->
+              <img src="https://scontent.fqro3-1.fna.fbcdn.net/v/t1.15752-9/197506108_491844488817839_5044626731008746965_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=ae9488&_nc_ohc=J3h4s-tZRA4AX_F2W9A&_nc_ht=scontent.fqro3-1.fna&oh=476a6a4313b7876ab6b99f289cd4df6d&oe=6122512F" height="300" style="text-align: center;">
+                <pre></pre>
+                <font face="Arial" size=5>
+                    <p style="text-align: justify;  color: black"><b>La MICRO.com</b> es una app que nace de la problemática que hay por la pandemia actual, su objetivo es brindar un servicio público de transporte, así como ofrecer seguridad a cada uno de nuestros usuarios, porque aquí, nuestros clientes son nuestra importacia</p>
+                </font>
+            </div>
+
+            <div class="col-lg-1 col-md-1 col-sm-0"></div>
+
+            <!--FORMULARIO INICIO-->
+            <!--SUBTEMA INICIO-->
+            <div class="col-lg-6 col-md-5 col-sm-12">
+                <center>
+                    <font face="Arial Black">
+                        <h2 style="color: black">¡El tiempo es tuyo, ahora más que nunca!</h2>
+                    </font>
+                </center>
+                <pre></pre>
+                <!--SUBTEMA FIN-->
+            
+            <!--ENCABEZADO INCIO-->
+          <form action="/new" method="POST">
+            <div class="card">
+                <div class="card-header" style="background-color: black;">
+                    <h3 style="color:white">Realiza tu cuenta</h3>
+                </div>
+                <!--CUERPO INICIO-->
+                <div class="card-body" style="background-color:rgb(225, 123, 0);">
+                    <input type="hidden" name="status" id="status" value="true">
+                    <p><b>Nombre:</b></p>
+                    <input class="form-control mb-2 border border-dark" type="text" name="name" id="name" placeholder="Nombre(s)">
+                    <p><b>Apellidos:</b></p>
+                    <input class="form-control mb-2 border border-dark" type="text" name="lastName" id="lastName" placeholder="Apellido(s)">
+                    <p><b>Email:</b></p>
+                    <input class="form-control mb-2 border border-dark" type="email" name="email" id="email" placeholder="user1234@gmail.com">
+                    <p><b>Contraseña:</b></p>
+                    <input class="form-control mb-2 border border-dark" type="text" name="password" id="password" placeholder="password123">
+                    <input type="hidden" name="type" id="type" value="user">
+                </div>
+                <!--PIE INCIO-->
+                <div class="card-footer" style="background-color: black;">
+                <button class="btn btn-primary" type="submit"><b>Registrarme</b></button>
+                <a class="btn btn-secondary" href="/"><b>Ya tengo cuenta!</b></a>
+                </div>
+            </div>
+        </form>
+            <!--FIN DE FORMULARIO-->
+        </div>
+            <div class="col-lg-1 col-md-1 col-sm-0"></div>
+            <!--SUBTEMA3 INICIO-->
+        </div>
+        </div>
+        </div>
+    </body>
+        <!--FIN-->
+        <%- include('templates/fin')%>

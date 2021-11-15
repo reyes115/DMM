@@ -1,0 +1,90 @@
+<!--ENCABEZADO C-->
+<%- include('templates/encabezadoc')%>
+<body style="background-image: url(https://scontent.fqro3-1.fna.fbcdn.net/v/t1.15752-9/74413033_395794864643691_8657501668880941056_n.png?_nc_cat=108&ccb=1-3&_nc_sid=ae9488&_nc_ohc=v7hX9Kg4hwYAX9rUSj8&tn=YervRgVbEsFxzMxs&_nc_ht=scontent.fqro3-1.fna&oh=45d5f75e1b1f29b1f4ed3d04ab37e3f1&oe=60DD8E35);">
+    <div class="container" style="background-color:  rgb(255, 166, 0);;">
+        <pre>
+        </pre>   
+        <form class="" method="">
+        <div class="card">
+            <div class="card-header" style="background-color: rgb(0, 0, 0);"><h1><b style="color: white;">Opciones🛠</b></h1></div>
+            <div class="card-body" style="background-color:ghostwhite">
+            <a class="btn btn-primary col-12 mb-3" style="text-align: center;" href=""><h3>📄 Políticas de la empresa</h3></a>
+            <button type="submit" class="btn btn-primary col-12 mb-3"><h3>👤 Actualizar información</h3></button> 
+            <a class="btn btn-primary col-12 mb-3" style="text-align: center;" href=""><h3>🗑️ Borrar mi cuenta</h3></a> <!--CAMBIAR  A BOTON-->
+            <a class="btn btn-primary col-12 mb-3" style="text-align: center;" href="/"><h3>🔒 Cerrar sesión</h3></a>
+            </div>
+            <div class="card-footer" style="background-color: black;">
+            <a class="btn btn-secondary" href="/gps">Atras</a>
+        </div>
+        </div> 
+        </form>
+        <pre>
+            
+        </pre>
+    </div>
+
+</body>
+<%- include('templates/fin')%>
+
+<body>
+    <script type="text/javascript">
+    alert("Bienvenido a cuentasRegistro, a continuación se mostrarán los registros de los usuarios.\nDar clic en (Aceptar)");
+    </script>
+    <!--INCIO DE TABLA-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <a href="" class="btn btn-primary mb-3">Registrar nuevo usuario 👤</a>
+            <div class="card">
+                <div class="card-header border border-dark" style="background-color: rgb(255, 166, 0);">
+                    <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: black;"><b>Registro Usuarios</b></h3>
+                </div>
+                <div class="card-body border border-dark">
+                    <table class="table col-lg-12 col-md-12 col-sm-12">
+                        <thead class="border border-dark">
+                            <th class="table-dark">Id</th>
+                            <th class="table-secondary">Apellido(s)</th>
+                            <th class="table-secondary">Nombre(s)</th>
+                            <th class="table-dark">Email</th>
+                            <th class="table-secondary">Password</th>
+                            <th class="table-secondary">Modificar/Borrar/Eliminar cuenta</th>
+                        </thead>
+                        <tbody class="border border-dark">
+                            <!--CICLO INICIO
+                            <%
+                            var id=1;
+                            usuarios.forEach((usuario)=>{ PONER EN LA RUTA LA VARIABLE
+                            %>-->
+                            <tr>
+                                <td class="border border-dark"><b>1</b></td>
+                                <td>Martinez</td>
+                                <td class="border border-dark">Antonio</td>
+                                <td>antonio@gmail.com</td>
+                                <td class="border border-dark">123</td>
+                                <td><a class="btn btn-primary" href=""><b>Modificar</b></a> 
+                                    <a class="btn btn-primary" href=""><b>Borrar</b></a></td>
+                                    <a class="btn btn-primary" href=""><b>Eliminar cuenta</b></a>
+                                </td>
+                            </tr>
+                            <!--<%    
+                            id++;
+                        });
+                            %>-->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer border border-dark" style="background-color: rgb(255, 166, 0);"></div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--INICIO PIE DE PAGINA-->
+    <footer class="bd-footer py-1 mt-1 bg-light;"></footer>
+    <!--FINAL DE PIE DE PAGINA-->
+</body>
+
+<td style="background-color: yellow;"><%= user.id%></td>
+<!--<td><%= user.lastname%></td>
+<td><%= user.name%></td>
+<td><%= user.email%></td>
+<td><%= user.password%></td>

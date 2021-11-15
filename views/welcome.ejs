@@ -1,0 +1,43 @@
+<%- include('templates/encabezado')%>
+<pre></pre>
+<body style="background-image: url(https://scontent.fqro3-1.fna.fbcdn.net/v/t1.15752-9/74413033_395794864643691_8657501668880941056_n.png?_nc_cat=108&ccb=1-3&_nc_sid=ae9488&_nc_ohc=v7hX9Kg4hwYAX9rUSj8&tn=YervRgVbEsFxzMxs&_nc_ht=scontent.fqro3-1.fna&oh=45d5f75e1b1f29b1f4ed3d04ab37e3f1&oe=60DD8E35);">
+    <div class="container">
+        <div class="row">
+        <!--TITULO DE LA PAGINA-->
+        <div class="col-lg-2 col-md-2 col-sm-0"></div>
+        <div class="col-lg-8 col-md-8 col-sm-12">
+        <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">¡Bienvenido!</h1>
+        <form action="/login" method="POST">
+        <div class="card">
+            <div class="card-header border border-dark" style="background-color: black; color: white;"><h3><b>Inicia sesión</b></h3></div>
+            <div class="card-body" style="background-color: rgb(255, 145, 0);">
+                <p><b>Email:</b></p>
+                <input class="form-control mb-3 border border-dark" type="email" name="emailLogin" id="emailLogin" placeholder="user1234@gmail.com">
+                <p><b>Contraseña:</b></p>
+                <input class="form-control mb-3 border border-dark" type="password" name="passwordLogin" id="passwordLogin" placeholder="password123">
+            </div>
+            <div class="card-footer border border-dark" style="background-color: black;">
+                <button class="btn btn-primary col-3" type="submit"><b>Go!</b></button>
+                <a class="btn btn-secondary" href="/new"><b>Registrarme</b></a>
+            </div>
+        </div>
+        </form>
+        </div>
+        
+        <pre>
+
+        </pre>
+        <div class="col-lg-2 col-md-2 col-sm-0"></div>
+
+        <%- include('templates/info_extra')%>
+
+    </div>
+    </div>
+    <pre>
+
+
+    </pre>
+</body>
+
+<!--FIN-->
+<%- include('templates/fin')%>

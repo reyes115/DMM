@@ -1,0 +1,54 @@
+<%- include('templates/encabezadoc')%>
+<body style="background-color: black;">
+    <script type="text/javascript">
+        alert("LA MICRO.com te da la bienvenida a su página de usuarios inactivos.\nDar clic en (Aceptar)");
+        </script>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <form action="/buscar1" method="POST" class="d-flex">
+                        <input class="form-control me-2" name="buscar" id="buscar" style="background-color: whitesmoke; text-align: center;" type="search" placeholder="Seleccionar Nombre de Usuario" aria-label="Search">
+                        <button class="btn btn-primary col-2" type="submit">Buscar 🔍</button>
+                      </form>
+                </div>
+                <pre>
+                </pre>
+                <div class="card">
+                    <div class="card-header border border-dark" style="background-color: rgb(255, 166, 0);">
+                        <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: black;"><b>Registro Usuarios inactivos</b></h3>
+                    </div>
+                    <div class="card-body border border-dark">
+                        <table class="table">
+                            <th class="table-dark">ID</th>
+                            <th class="table-secondary">Apellido(s)</th>
+                            <th class="table-dark">Nombre(s)</th>
+                            <th class="table-secondary">Email</th>
+                            <th class="table-dark">Password</th>
+                            <th class="table-secondary">Modificar/Borrar/Eliminar cuenta</th>
+                        <tbody>
+                            <%
+                            users.forEach((user)=>{
+                                %>
+                            <tr class="align-middle">
+                                <td class="table-dark"><b><%= user.id%> 👤</b></td>
+                                <td class="table-secondary"><b><%= user.lastName%></b></td>
+                                <td class="table-dark"><b><%= user.name%></b></td>
+                                <td class="table-secondary"><b><%= user.email%></b></td>
+                                <td class="table-dark"><b><%= user.password%></b></td>
+                                <td class="table-secondary"><h3>
+                                    <a class="btn btn-secondary" href="/onId/<%= user.id%>">Activar🟢</a>
+                                    <a class="btn btn-primary" href="/Off1Id/<%= user.id%>">Eliminar🔴</a> 
+                                </h3></td>
+                            </tr>
+                            <% 
+                        });
+                        %>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+</body>
+<%- include('templates/fin')%>

@@ -1,0 +1,39 @@
+<%- include('templates/encabezadoc')%>
+<body style="background-color: black;">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+        <!--ENCABEZADO INCIO-->
+          <form action="/modificar" method="POST">
+            <div class="card">
+                <div class="card-header" style="background-color: black;">
+                    <h3 style="color:white">Modifica el usuario</h3>
+                </div>
+                <!--CUERPO INICIO-->
+                <div class="card-body" style="background-color:rgb(225, 123, 0);">
+                    <input type="hidden" name="idNew" id="idNew" value="<%= users[0].id%>">
+                    <p>Nombre:</p>
+                    <input class="form-control mb-2 border border-dark" type="text" name="nameNew" id="nameNew" placeholder="Nombre(s)" value="<%= users[0].name%>">
+                    <p>Apellidos:</p>
+                    <input class="form-control mb-2 border border-dark" type="text" name="lastNameNew" id="lastNameNew" placeholder="Apellido(s)" value="<%= users[0].lastName%>">
+                    <p>Email:</p>
+                    <input class="form-control mb-2 border border-dark" type="email" name="emailNew" id="emailNew" placeholder="user1234@gmail.com" value="<%= users[0].email%>">
+                    <p>Contraseña:</p>
+                    <input class="form-control mb-2 border border-dark" type="text" name="passwordNew" id="passwordNew" placeholder="password123" value="<%= users[0].password%>">
+                    <p>Tipo:</p>
+                    <input class="form-control mb-2 border border-dark" type="text" name="typeNew" id="typeNew" placeholder="admin or user" value="<%= users[0].type%>"
+                </div>
+                <!--PIE INCIO-->
+                <div class="card-footer" style="background-color: black;">
+                <button class="btn btn-primary" type="submit"><b>Modificar</b></button>
+                <a class="btn btn-secondary" href="/users"><b>Cancelar</b></a>
+                </div>
+            </div>
+        </form>
+            <!--FIN DE FORMULARIO-->
+        </div>
+        </div>
+    </div>
+</div>
+</body>
+<%- include('templates/fin')%>

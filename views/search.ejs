@@ -1,0 +1,51 @@
+<%- include('templates/encabezadoc')%>
+<body style="background-color: black">
+    <script type="text/javascript">
+        alert("LA MICRO.com te da la bienvenida a su página de rutas, busca la opción que más te convenga.\nDar clic en (Aceptar)");
+        </script>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <a href="/ruta" class="btn btn-primary mb-3">Guardar nueva ruta 🚌</a>
+                </div>
+                <pre>
+                </pre>
+                <div class="card">
+                    <div class="card-header border border-dark" style="background-color: rgb(255, 166, 0);">
+                        <h3 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: black;"><b>Rutas disponibles en la ciudad</b></h3>
+                    </div>
+                    <div class="card-body border border-dark">
+                        <table class="table">
+                            <th class="table-dark">ID</th>
+                            <th class="table-secondary">Ruta</th>
+                            <th class="table-dark">Inicio</th>
+                            <th class="table-secondary">Fin</th>
+                            <th class="table-dark">Hrs Inicio</th>
+                            <th class="table-secondary">Hrs Fin</th>
+                            <th class="table-dark">Eliminar ruta</th>
+
+                            <tbody>
+                                <% 
+                                ruta.forEach((ruta)=>{
+                                    %>
+                                    <tr class="align-middle">
+                                    <td class="table-dark"><b><%= ruta.id%></b></td>
+                                    <td class="table-secondary"><b><%= ruta.ruta%></b></td>
+                                    <td class="table-dark"><b><%= ruta.inicio%></b></td>
+                                    <td class="table-secondary"><b><%= ruta.fin%></b></td>
+                                    <td class="table-dark"><b><%= ruta.hrInicio%></b></td>
+                                    <td class="table-secondary"><b><%= ruta.hrFin%></b></td>
+                                    <td class="table-dark"><b><a class="btn btn-primary" href="/seleccionarId/<%= ruta.id%>">Eliminar 🔴</a> </b></td>
+                                    </tr>
+                                <%
+                            });
+                                %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+</body>
+<%- include('templates/fin')%>

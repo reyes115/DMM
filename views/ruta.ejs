@@ -1,0 +1,33 @@
+<%- include('templates/encabezadoc')%>
+<body style="background-color: black;">
+    <div class="container">
+    <form action="/ruta/newruta" method="POST">
+        <div class="card">
+            <div class="card-header" style="background-color: black;">
+                <h3 style="color:white">Ingresa tu nueva ruta</h3>
+            </div>
+            <!--CUERPO INICIO-->
+            <div class="card-body" style="background-color:rgb(225, 123, 0);">
+                <input type="hidden" name="status" id="status" value="true">
+                <p><b>Ruta:</b></p>
+                <input class="form-control mb-2 border border-dark" type="text" name="ruta" id="ruta" placeholder="Ingresa el # de tu ruta">
+                <p><b>Inicio:</b></p>
+                <input class="form-control mb-2 border border-dark" type="text" name="inicio" id="inicio" placeholder="Comienzo de trayecto">
+                <p><b>Fin:</b></p>
+                <input class="form-control mb-2 border border-dark" type="text" name="fin" id="fin" placeholder="Final de trayecto">
+                <p><b>Hora de inicio:</b></p>
+                <input class="form-control mb-2 border border-dark" type="text" name="hrInicio" id="hrInicio" placeholder="Ejemplo 5:00 am">
+                <p><b>Última hora:</b></p>
+                <input class="form-control mb-2 border border-dark" type="text" name="hrFin" id="hrFin" placeholder="Ejemplo 21:00 pm">
+            </div>
+            <!--PIE INCIO-->
+            <div class="card-footer" style="background-color: black;">
+            <button class="btn btn-primary" type="submit"><b>Registrar</b></button>
+            <a class="btn btn-secondary" href="/ruta/busses"><b>Cancelar</b></a><!--CAMBIAR-->
+            </div>
+        </div>
+    </form>
+    </div>
+
+</body>
+<%- include('templates/fin')%>

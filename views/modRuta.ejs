@@ -1,0 +1,33 @@
+<%- include('templates/encabezadoc')%>
+<body style="background-color: black;">
+    <div class="container">
+    <form action="/ruta/modRuta" method="POST">
+        <div class="card">
+            <div class="card-header" style="background-color: black;">
+                <h3 style="color:white">Modifica tu ruta</h3>
+            </div>
+            <!--CUERPO INICIO-->
+            <div class="card-body" style="background-color:rgb(225, 123, 0);">
+                <input type="hidden" name="idNew" id="idNew" value="<%= ruta[0].id%>">
+                <p><b>Ruta:</b></p>
+                <input class="form-control mb-2 border border-dark" type="text" name="rutaNew" id="rutaNew" placeholder="Ingresa el # de tu ruta" value="<%= ruta[0].ruta%>">
+                <p><b>Inicio:</b></p>
+                <input class="form-control mb-2 border border-dark" type="text" name="inicioNew" id="inicioNew" placeholder="Comienzo de trayecto" value="<%= ruta[0].inicio%>">
+                <p><b>Fin:</b></p>
+                <input class="form-control mb-2 border border-dark" type="text" name="finNew" id="finNew" placeholder="Final de trayecto" value="<%= ruta[0].fin%>">
+                <p><b>Hora de inicio:</b></p>
+                <input class="form-control mb-2 border border-dark" type="text" name="hrInicioNew" id="hrInicioNew" placeholder="Ejemplo 5:00 am" value="<%= ruta[0].hrInicio%>">
+                <p><b>Última hora:</b></p>
+                <input class="form-control mb-2 border border-dark" type="text" name="hrFinNew" id="hrFinNew" placeholder="Ejemplo 21:00 pm" value="<%= ruta[0].hrFin%>">
+            </div>
+            <!--PIE INCIO-->
+            <div class="card-footer" style="background-color: black;">
+            <button class="btn btn-primary" type="submit"><b>Registrar</b></button>
+            <a class="btn btn-secondary" href="/ruta/busses"><b>Cancelar</b></a><!--CAMBIAR-->
+            </div>
+        </div>
+    </form>
+    </div>
+
+</body>
+<%- include('templates/fin')%>

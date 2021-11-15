@@ -1,0 +1,29 @@
+<%- include('templates/encabezado')%>
+<body style="background-color: black;">
+<pre></pre>
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+        <form action="/call" method="POST">
+        <div class="card">
+            <div class="card-header" style="background-color:  rgb(255, 166, 0);"><h1><b>Contáctanos</b></h1></div>
+            <div class="card-body">
+                <input class="form-control mb-3" type="text" name="nameContac" id="nameContac" placeholder="Nombre completo:">
+                <input class="form-control mb-3" type="text" name="emailContac" id="emailContac" placeholder="Correo:">
+                <textarea class="form-control" name="messageContac" id="messageContac" cols="30" rows="10" placeholder="Escribe tus comentarios..."></textarea>
+            </div>
+            <div class="card-footer" style="background-color: rgb(255, 166, 0);">
+                <button class="btn btn-primary mt-3 mb-3 col-12" type="submit">Enviar mensaje</button>
+                <a class="btn btn-secondary mt-3 mb-3 col-12" href="/">Cancelar</a>
+            </div>
+        </div>
+        </form>
+    </div>
+    <div class="col-2"></div>
+</div>
+<pre>
+
+</pre>
+</body>
+
+<%- include('templates/fin')%>
