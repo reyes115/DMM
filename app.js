@@ -28,7 +28,10 @@ app.use('/',usuario);
 app.use('/ruta',rutas)
 
 //APP'S PORT
-app.listen(3008,()=>{
-    console.log("LA MICRO.com connected in 3008");
+const port=process.env.PORT || 3000; //--> Estamos optiendo el puerto que nos estan mandando
+
+app.listen(port,()=>{
+	console.log('Servidor en el puerto '+port);
 });
+
 
