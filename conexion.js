@@ -5,8 +5,8 @@ const UsuariosModelo=require('./modelos/usuario');
 // REQUES FROM RUTAS/MODELOS
 const RutasModelo=require('./modelos/rutas');
 //REQUEST FROM CONEXION ---> DB'S NAME/USER/PASSWORD/ OBJ
-const conexion=new Sequelize('micro','root','root',{
-    host:'localhost',
+const conexion=new Sequelize('bimkgfz1attj7yo1eaa7','uyniujhv2qoe8h8y','E9DsxloKcAm1b64hJiFy',{
+    host:'bimkgfz1attj7yo1eaa7-mysql.services.clever-cloud.com',
     dialect:'mysql'
 });
 
