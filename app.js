@@ -11,7 +11,7 @@ const usuario=require('./rutas/usuario');
 // REQUEST FROM RUTAS 
 const rutas=require('./rutas/rutas');
 // STATIC RUTE 
-app.use('/estatico',express.static(path.join(__dirname,'public')));
+app.use('/public',express.static(path.join(__dirname,'public')));
 //EJS VIEWS 
 app.set('view engine','ejs');
 // DATA FOR FORM
