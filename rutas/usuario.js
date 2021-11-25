@@ -17,8 +17,11 @@ ruta.post('/datosAlumnos',(req,res)=>{
     
 });
 
-//RUTA LOGIN
+ruta.get('/mapaprincipal',(req,res)=>{
+    res.render('mapaPrincipal');
+});
 
+//RUTA LOGIN
 ruta.get('/',(req,res)=>{
     res.render('welcome');
 });

@@ -23,6 +23,7 @@ app.use(session({
     saveUninitialized:true
 }));  
 
+
 // PRINCIPAL RUTE IN APP FROM USER AND RUTES
 app.use('/',usuario);
 app.use('/ruta',rutas)
