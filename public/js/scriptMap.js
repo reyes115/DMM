@@ -26,8 +26,8 @@ function initMap() {
             lng: position.coords.longitude,
           };
 
-          //infoWindow.setPosition(pos);
-          //infoWindow.setContent("Ubicación actual");
+          infoWindow.setPosition(pos);
+          infoWindow.setContent("Ubicación actual");
           infoWindow.open(map);
           map.setCenter(pos);
 
