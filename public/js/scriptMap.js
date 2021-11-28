@@ -56,7 +56,7 @@ function initMap() {
     zoom: 15,
   });
   infoWindow = new google.maps.InfoWindow();
-  infoWindow.open(map);
+ /* infoWindow.open(map);
   map.setCenter(central);
   map.setCenter(hidalgo1);
   map.setCenter(hidalgo2);
@@ -98,7 +98,7 @@ function initMap() {
   map.setCenter(universidad3);
   map.setCenter(rio2);
   map.setCenter(rio3);
-  map.setCenter(avCentral14);
+  map.setCenter(avCentral14);*/
 
 
   
