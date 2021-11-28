@@ -45,6 +45,16 @@ ruta.post('/new',(req,res)=>{
     })
 });
 
+//PAY PAL
+ruta.get('/paypal',(req,res)=>{
+    if(!req.session.usuario){
+        res.redirect('/404Error')
+    }else{
+    res.render('payPal');
+    }
+});
+
+
 // RUTA GPS 
 ruta.get('/gps',(req,res)=>{
     if(!req.session.usuario){

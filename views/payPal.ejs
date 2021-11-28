@@ -1,0 +1,27 @@
+<%- include ('templates/encabezadob') %>
+<body style="background-color: black;">
+<div class="row mt-5">
+    <div class="col-2"></div>
+    <div class="col-8">
+        <form action="/PayPal" method="post">
+            <div class="card">
+                <div class="card-header" style="background-color: rgb(225, 123, 0);">
+                    <center>
+                        <h1><b>Realizar pagos por </b><b style="color: blue;">Pay</b><b style="color: royalblue;">Pal</b></h1>
+                    </center>
+                </div>
+                <div class="card-body">
+                    <center>
+                        <h2><b>Paga tu pasaje antes con tan solo un click!</b></h2>
+                        <br></br>
+                        <button type="submit" class="btn btn-primary col-8"><b>PAGAR</b></button>
+                        </center>
+                </div>
+
+            </div>
+        </form>
+    </div>
+    <div class="col-2"></div>
+</div>
+</body>
+<%- include('templates/fin')%>
