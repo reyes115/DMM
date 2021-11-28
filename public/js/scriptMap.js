@@ -56,6 +56,51 @@ function initMap() {
     zoom: 15,
   });
   infoWindow = new google.maps.InfoWindow();
+  infoWindow.open(map);
+  map.setCenter(central);
+  map.setCenter(hidalgo1);
+  map.setCenter(hidalgo2);
+  map.setCenter(hidalgo3);
+  map.setCenter(fernando);
+  map.setCenter(juarez1);
+  map.setCenter(juarez2);
+  map.setCenter(juarez3);
+  map.setCenter(juarez4);
+  map.setCenter(avCentral);
+  map.setCenter(avCentral1);
+  map.setCenter(hidalgo4);
+  map.setCenter(constituyentes1);
+  map.setCenter(constituyentes2);
+  map.setCenter(constituyentes3);
+  map.setCenter(constituyentes4);
+  map.setCenter(avCentral2);
+  map.setCenter(constituyentes5);
+  map.setCenter(constituyentes6);
+  map.setCenter(noviembre);
+  map.setCenter(mina);
+  map.setCenter(mayo1);
+  map.setCenter(mayo2);
+  map.setCenter(articulo);
+  map.setCenter(avCentral3);
+  map.setCenter(avCentral4);
+  map.setCenter(rio1);
+  map.setCenter(avCentral5);
+  map.setCenter(universidad1);
+  map.setCenter(universidad2);
+  map.setCenter(avCentral6);
+  map.setCenter(avCentral7);
+  map.setCenter(avCentral8);
+  map.setCenter(avCentral9);
+  map.setCenter(avCentral10);
+  map.setCenter(avCentral11);
+  map.setCenter(avCentral12);
+  map.setCenter(avCentral13);
+  map.setCenter(universidad3);
+  map.setCenter(rio2);
+  map.setCenter(rio3);
+  map.setCenter(avCentral14);
+
+
   
 
 
