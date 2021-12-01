@@ -53,7 +53,13 @@ ruta.get('/paypal',(req,res)=>{
     res.render('payPal');
     }
 });
-
+ruta.get('/paypalMensaje',(req,res)=>{
+    if(!req.session.usuario){
+        res.redirect('/404Error')
+    }else{
+    res.render('paypalMensaje');
+    }
+});
 
 // RUTA GPS 
 ruta.get('/gps',(req,res)=>{

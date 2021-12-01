@@ -85,7 +85,7 @@ const executePayment=(req,res)=>{
         body:{},
         json:true
     },(err,response)=>{
-        res.json("PAGO REALIZADO, ¡GRACIAS!");
+        res.redirect('/paypalMensaje');
     });
 }
 
