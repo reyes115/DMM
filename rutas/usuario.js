@@ -1,10 +1,26 @@
 //REQUEST FROM EXPRESS 
 const express=require('express');
+
+
 //REQUEST FROM RUTA
 const ruta=express.Router();
 const {Usuario}=require('../conexion');
 const nodemailer=require('nodemailer');
 const usuario = require('../modelos/usuario');
+
+const bienvenido=((req,res,next)=>{
+    console.log("Bienvenido a la MICRO.COM");
+    next();
+});
+
+const primerDato=((req,res,next)=>{
+    console.log("Estos son los primeros datos extraidos del formulario:");
+    next();
+});
+const segundoDato=((req,res,next)=>{
+    console.log("Estos son los datos que seran almacenados dentro de la pagina:");
+    next();
+})
 
 
 ruta.post('/datosAlumnos',(req,res)=>{
@@ -22,7 +38,7 @@ ruta.get('/mapaprincipal',(req,res)=>{
 });
 
 //RUTA LOGIN
-ruta.get('/',(req,res)=>{
+ruta.get('/',bienvenido,(req,res)=>{
     res.render('welcome');
 });
 // RUTA NEW USER
@@ -39,10 +55,12 @@ ruta.post('/new',(req,res)=>{
     Usuario.create(req.body)
     .then(()=>{
         res.redirect("/");
+        
     })
     .catch((err)=>{
         console.log("Error al insertar el usuario "+err);        
     })
+    
 });
 
 //PAY PAL
@@ -54,11 +72,7 @@ ruta.get('/paypal',(req,res)=>{
     }
 });
 ruta.get('/paypalMensaje',(req,res)=>{
-    if(!req.session.usuario){
-        res.redirect('/404Error')
-    }else{
     res.render('paypalMensaje');
-    }
 });
 
 // RUTA GPS 
@@ -102,6 +116,7 @@ ruta.post('/newuser',(req,res)=>{
     .catch((err)=>{
         console.log("Error al insertar el usuario "+err);        
     })
+
 });
 
 // RUTA LOGOUT
@@ -126,7 +141,7 @@ ruta.get('/modificarId/:id',(req,res)=>{
 });
 
 // RUTA POST MODIFICAR
-ruta.post('/modificar',(req,res)=>{
+ruta.post('/modificar',segundoDato,(req,res)=>{
     const datos={
         name:req.body.nameNew,
         lastName:req.body.lastNameNew,
@@ -145,6 +160,7 @@ ruta.post('/modificar',(req,res)=>{
     .catch((err)=>{
         res.status(400).send("Error al modificar el usuario "+err);
     });
+    console.log(datos);
 });
 
 //RUTA BORRAR 
@@ -301,7 +317,7 @@ ruta.get('/policies',(req,res)=>{
 });
 
 // RUTA POST LOGIN
-ruta.post('/login',(req,res)=>{
+ruta.post('/login',primerDato,(req,res)=>{
     Usuario.findAll({
         where:{
             email:req.body.emailLogin,
@@ -327,7 +343,11 @@ ruta.post('/login',(req,res)=>{
     .catch((err)=>{
         res.status(400).send("Error "+err);
     });
-
+    var datos={
+        email:req.body.emailLogin,
+            password:req.body.passwordLogin,
+    }
+    console.log(datos);
 });
 
 //RUTA BUSCAR USER
