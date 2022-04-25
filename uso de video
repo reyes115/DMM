@@ -1,0 +1,37 @@
+            <div class="row justify-content-md-center espacio-row">
+                <!--RELOJ 1-->
+                    <div class="col-md-3">
+                        <img src="http://localhost:8000/img/watch/watch1.png" width="250"  class="img-fluid" alt="Relog 1">
+                        <p><strong>Reloj 1</strong></p>
+                        <p><strong>$82</strong></p>
+                        <button id="bntComprar1" type="button" class="btn btn-outline-light">
+                            Comprar
+                        </button>
+                    </div>
+
+                <!--RELOJ 2-->
+
+                    <div class="col-md-4">
+                        <img src="http://localhost:8000/img/watch/watch4.png" width="250"  class="img-fluid" alt="Relog 1">
+                        <p><strong>Reloj 2</strong></p>
+                        <p><strong>$96</strong></p>
+                        <button id="bntComprar2" type="button" class="btn btn-outline-light">
+                            Comprar
+                        </button>
+                    </div>
+
+                <!--RELOJ 3-->
+
+                    <div class="col-md-5">
+                        <img src="http://localhost:8000/img/watch/watch5.png" width="250"  class="img-fluid" alt="Relog 1">
+                        <p><strong>Reloj 3</strong></p>
+                        <p><strong>$75</strong></p>
+                        <button id="bntComprar3" type="button" class="btn btn-outline-light">
+                            Comprar
+                        </button>
+                    </div>
+
+
+            </div>
+        </div>
+    </section>
